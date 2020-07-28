@@ -1,10 +1,12 @@
 package ro.jademy.millionaire;
 
+import ro.jademy.millionaire.database.QuestionProvider;
 import ro.jademy.millionaire.model.Game;
 import ro.jademy.millionaire.model.Question;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
@@ -39,6 +41,18 @@ public class Main {
             // loop through sub-list until nrOfQuestions and select random items by index
             // return said list
 
-        return new ArrayList<>();
+        List<Question> questionsOfDiff = new ArrayList<>();
+        List<Question> questionsRandom = new ArrayList<>();
+        for (Question question: QuestionProvider.ALL_QUESTIONS) {
+            if (question.getDifficulty() == difficulty) {
+                questionsOfDiff.add(question);
+            }
+        }
+        Random random = new Random();
+        for (int i = 0; i < nrOfQuestions; i++) {
+            int randomIndex = random.nextInt(questionsOfDiff.size());
+            questionsRandom.add(questionsOfDiff.remove(randomIndex));
+        }
+        return questionsRandom;
     }
 }

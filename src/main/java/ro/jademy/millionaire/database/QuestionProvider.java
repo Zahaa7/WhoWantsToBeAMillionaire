@@ -9,7 +9,7 @@ import java.util.List;
 
 public class QuestionProvider {
 
-    private static List<Question> ALL_QUESTIONS = Arrays.asList(
+    public static List<Question> ALL_QUESTIONS = Arrays.asList(
             new Question("Question 1?", Arrays.asList( // this is question's text
                     new Answer("One"),   //
                     new Answer("Two"),   //  those are the wrong answers
