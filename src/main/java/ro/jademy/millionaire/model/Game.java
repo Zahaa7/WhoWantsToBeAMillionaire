@@ -91,7 +91,7 @@ public class Game {
                 List<Answer> questionAnswers = askQuestion(difficultyThreeQuestion, currentLevel);
                 gameContinue = answerQuestion(difficultyThreeQuestion, questionAnswers);
                 if (gameContinue) {
-                    System.out.println("CONGRATULATIONS, YOU WON : " + currentLevel.getReward() + " !!");
+                    System.out.println("Congrats, you've WON : " + currentLevel.getReward() + " !!");
                     gameContinue = false;
                     break;
                 }

@@ -32,7 +32,7 @@ public class QuestionProvider {
                     new Answer("Megan and Dylan"),
                     new Answer("Mabel and Skipper")
             ), new Answer("Mabel and Dipper"), 0),
-            new Question("Which of these is not a book of the Bible? 5?", Arrays.asList(
+            new Question("Which of these is not a book of the Bible?", Arrays.asList(
                     new Answer("Kings"),
                     new Answer("Judges"),
                     new Answer("Numbers")
