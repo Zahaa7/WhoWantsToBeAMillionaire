@@ -28,7 +28,6 @@ public class Main {
         //----- Initialize game -----//
         Game game = new Game(difficultyZeroQuestion, difficultyOneQuestion, difficultyTwoQuestion, difficultyThreeQuestion);
 
-        // TODO: Start the game
         game.start();
     }
 }

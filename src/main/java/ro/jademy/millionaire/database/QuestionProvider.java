@@ -12,7 +12,7 @@ import java.util.Random;
 public class QuestionProvider {
 
     public static List<Question> ALL_QUESTIONS = Arrays.asList(
-            new Question("How many Shrek movies are there in total??", Arrays.asList( // this is question's text
+            new Question("How many Shrek movies are there in total?", Arrays.asList( // this is question's text
                     new Answer("Five"),   //
                     new Answer("Two"),   //  those are the wrong answers
                     new Answer("Six")  //
@@ -22,12 +22,12 @@ public class QuestionProvider {
                     new Answer("Alpha Centauri A"),
                     new Answer("Alpha Centauri B")
             ), new Answer("The Sun"), 0),
-            new Question("What animal was Flipper from the popular 1964 children's show 'Flipper'??", Arrays.asList(
+            new Question("What animal was Flipper from the popular 1964 children's show 'Flipper'?", Arrays.asList(
                     new Answer("Whale"),
                     new Answer("Seal"),
                     new Answer("Dog")
             ), new Answer("Dolphin"), 0),
-            new Question("What are the names of the two main characters from the cartoon 'Gravity Falls'??", Arrays.asList(
+            new Question("What are the names of the two main characters from the cartoon 'Gravity Falls'?", Arrays.asList(
                     new Answer("MaryAnn and Dylan"),
                     new Answer("Megan and Dylan"),
                     new Answer("Mabel and Skipper")
@@ -42,17 +42,17 @@ public class QuestionProvider {
                     new Answer("Two"),
                     new Answer("Three")
             ), new Answer("Four"), 0),
-            new Question("What part of a chicken is commonly called the drumstick??", Arrays.asList(
+            new Question("What part of a chicken is commonly called the drumstick?", Arrays.asList(
                     new Answer("Breast"),
                     new Answer("Knee"),
                     new Answer("Ankle")
             ), new Answer("Leg"), 0),
-            new Question("The British clay animation series featuring a man and his dog is called Wallace and who??", Arrays.asList(
+            new Question("The British clay animation series featuring a man and his dog is called Wallace and who?", Arrays.asList(
                     new Answer("Timmy"),
                     new Answer("Wayne"),
                     new Answer("Thomas")
             ), new Answer("Gromit"), 1),
-            new Question("What sound does a goose make??", Arrays.asList(
+            new Question("What sound does a goose make?", Arrays.asList(
                     new Answer("Beep"),
                     new Answer("Snort"),
                     new Answer("Chirp")
@@ -62,11 +62,11 @@ public class QuestionProvider {
                     new Answer("The Busty Dab"),
                     new Answer("The Chum Bucket")
             ), new Answer("The Rusty Krab"), 1),
-            new Question("Question 11?", Arrays.asList(
-                    new Answer("One"),
-                    new Answer("Two"),
-                    new Answer("Three")
-            ), new Answer("Four"), 1),
+            new Question("The lowest grossing movie ever, 'ZYZZYX Road,' made how much money at the box office?", Arrays.asList(
+                    new Answer("$12,400"),
+                    new Answer("$225"),
+                    new Answer("$0")
+            ), new Answer("$30"), 1),
             new Question("\"What year was the game 'Nintendogs' released for the Nintendo DS console?", Arrays.asList(
                     new Answer("2004"),
                     new Answer("2006"),
@@ -97,7 +97,7 @@ public class QuestionProvider {
                     new Answer("Minnie Mouse"),
                     new Answer("Mickey Mouse")
             ), new Answer("SpongeBob SquarePants"), 2),
-            new Question("What is the most visible colour in the dark for humans??", Arrays.asList(
+            new Question("What is the most visible colour in the dark for humans?", Arrays.asList(
                     new Answer("Red"),
                     new Answer("Green"),
                     new Answer("White")
