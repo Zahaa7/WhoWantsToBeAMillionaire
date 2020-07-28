@@ -52,7 +52,7 @@ public class QuestionProvider {
                     new Answer("Wayne"),
                     new Answer("Thomas")
             ), new Answer("Gromit"), 1),
-            new Question("What sound does a goose make?", Arrays.asList(
+            new Question("What sound does a goose make??", Arrays.asList(
                     new Answer("Beep"),
                     new Answer("Snort"),
                     new Answer("Chirp")
