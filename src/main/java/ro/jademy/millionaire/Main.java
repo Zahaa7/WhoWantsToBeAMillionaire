@@ -4,9 +4,7 @@ import ro.jademy.millionaire.database.QuestionProvider;
 import ro.jademy.millionaire.model.Game;
 import ro.jademy.millionaire.model.Question;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Main {
 
@@ -29,5 +27,7 @@ public class Main {
         Game game = new Game(difficultyZeroQuestion, difficultyOneQuestion, difficultyTwoQuestion, difficultyThreeQuestion);
 
         game.start();
+
+
     }
 }

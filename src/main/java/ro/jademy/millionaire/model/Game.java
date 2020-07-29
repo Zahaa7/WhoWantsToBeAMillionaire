@@ -136,8 +136,7 @@ public class Game {
                 + currentLevel.getRewardBreakout() + "\n");
         System.out.println(questionList.get(0).getText());
 
-        List<Answer> allAnswers = new ArrayList<>();
-        allAnswers.addAll(questionList.get(0).getWrongAnswers());
+        List<Answer> allAnswers = new ArrayList<>(questionList.get(0).getWrongAnswers());
         allAnswers.add(random.nextInt(allAnswers.size()), questionList.get(0).getCorrectAnswer());
         printAnswers(allAnswers);
 
@@ -147,9 +146,9 @@ public class Game {
     private void printAnswers(List<Answer> answerList) {
         String middleEmptySpace = " ";
         int maxLength = 0;
-        for (int i = 0; i < answerList.size(); i++) {
-            if (answerList.get(i).getText().length() > maxLength) {
-                maxLength = answerList.get(i).getText().length();
+        for (Answer answer : answerList) {
+            if (answer.getText().length() > maxLength) {
+                maxLength = answer.getText().length();
             }
         }
         for (int i = 0; i < answerList.size(); i++) {
@@ -200,10 +199,16 @@ public class Game {
                     input = "4";
                     isValid = true;
                     break;
+                default:
+                    if ((!input.equalsIgnoreCase("W")) && (!input.equalsIgnoreCase("L"))) {
+                        System.out.println("Invalid input! Please, try again with the valid ones explained below.");
+                    }
+
+                    break;
             }
             if (input.equalsIgnoreCase("L")) {
                 if (helpUsed || lifelines.size() == 0) {
-                    //empty code block
+                    System.out.println("There are no more lifelines left to use!");
                 } else {
                     input = "L";
                     isValid = true;
@@ -216,20 +221,20 @@ public class Game {
         return input;
     }
 
-    private String validInputYesOrNo() {
-        boolean isValid = false;
-        String temp;
-        do {
-            System.out.println("[Type Y/N]");
-            temp = scanner.nextLine();
-            if (temp.equalsIgnoreCase("y")) {
-                isValid = true;
-            } else if (temp.equalsIgnoreCase("n")) {
-                isValid = true;
-            }
-        } while (!isValid);
-        return temp;
-    }
+    //public boolean validInputYesOrNo() {
+    //   boolean isValid = false;
+    //   String choice;
+    //   do {
+    //       System.out.println("[Type Y/N]");
+    //       choice = scanner.nextLine();
+    //       if (choice.equalsIgnoreCase("y")) {
+    //           isValid = true;
+    //       } else if (choice.equalsIgnoreCase("n")) {
+    //           isValid = true;
+    //       }
+    //   } while (!isValid);
+    //   return true;
+
 
     private boolean inputCase(int position, List<Answer> allAnswers, List<Question> questionList) {
         boolean isCorrectAnswer;
@@ -240,7 +245,7 @@ public class Game {
             questionList.remove(0);
         } else {
             System.out.println("\nWRONG answer! \n" );
-            System.out.println("Reward Checkpoint: " + currentLevel.getRewardBreakout());
+            System.out.println("Your checkpoint reward is: " + currentLevel.getRewardBreakout());
             isCorrectAnswer = false;
         }
         return isCorrectAnswer;
@@ -275,9 +280,7 @@ public class Game {
                     }
 
                     for (int i = 0; i < allAnswers.size(); i++) {
-                        if (allAnswers.get(i).getText().equals(wrongAnswerString) || i == indexCorrectAnswer) {
-
-                        } else {
+                        if (!allAnswers.get(i).getText().equals(wrongAnswerString) && i != indexCorrectAnswer) {
                             allAnswers.set(i, new Answer(""));
                         }
                     }

@@ -37,11 +37,11 @@ public class QuestionProvider {
                     new Answer("Judges"),
                     new Answer("Numbers")
             ), new Answer("Letters"), 0),
-            new Question("?", Arrays.asList(
-                    new Answer("One"),
-                    new Answer("Two"),
-                    new Answer("Three")
-            ), new Answer("Four"), 0),
+            new Question("What is the name of Half-Blood Semipure Prince in Harry Potter?", Arrays.asList(
+                    new Answer("Tom Riddle"),
+                    new Answer("James Potter"),
+                    new Answer("Cedric Diggory")
+            ), new Answer("Severus Snape"), 0),
             new Question("What part of a chicken is commonly called the drumstick?", Arrays.asList(
                     new Answer("Breast"),
                     new Answer("Knee"),
@@ -67,7 +67,7 @@ public class QuestionProvider {
                     new Answer("$225"),
                     new Answer("$0")
             ), new Answer("$30"), 1),
-            new Question("\"What year was the game 'Nintendogs' released for the Nintendo DS console?", Arrays.asList(
+            new Question("What year was the game 'Nintendogs' released for the Nintendo DS console?", Arrays.asList(
                     new Answer("2004"),
                     new Answer("2006"),
                     new Answer("2007")
@@ -92,7 +92,7 @@ public class QuestionProvider {
                     new Answer("Liquid Colour Display"),
                     new Answer("Light Cathode Display")
             ), new Answer("Liquid Crystal Display"), 2),
-            new Question("\"Which one of these characters does not have a star in the Hollywood Walk of Fame?", Arrays.asList(
+            new Question("Which one of these characters does not have a star in the Hollywood Walk of Fame?", Arrays.asList(
                     new Answer("Shrek"),
                     new Answer("Minnie Mouse"),
                     new Answer("Mickey Mouse")
